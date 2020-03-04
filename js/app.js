@@ -20,24 +20,25 @@ mahmood.sayHi();
 console.log(ahmad);
 console.log(Person);*/
 
-function Cat(name,likes,imagePath,goodWithDogs,goodWithCats,breed)
-{this.name=name;
- this.age=0;
-this.likes=likes;
-this.imagePath=imagePath;
-this.goodWithCats=goodWithCats;
-this.goodWithDogs=goodWithDogs;
-this.breed=breed;
+var frankie = new Cat("Frankie", ["cuddling", "chasing", "food"], `images/frankie.jpeg`, true, true, "shorthair");
+var serena=new Cat("Sereena",["cuddling", "chasing", "food"],`images/serena.jpeg`, false, true, "Turkish");
+var jumper = new Cat("Jumper", ["cuddling", "chasing", "napping"], `images/jumper.jpeg`, true, false, "British")
+
+function Cat(name, likes, imagePath, goodWithDogs, goodWithCats, breed) {
+    this.name = name;
+    this.age = 0;
+    this.likes = likes;
+    this.imagePath = imagePath;
+    this.goodWithCats = goodWithCats;
+    this.goodWithDogs = goodWithDogs;
+    this.breed = breed;
 }
-Cat.prototype.getAge=function(min,max)
-{
+Cat.prototype.getAge = function (min, max) {
     this.age = getRandomNum(min, max);
 
 
 }
-Cat.prototype.render=function()
-
-{
+Cat.prototype.render = function () {
 
     var container = document.getElementById("kittenProfiles");
     console.log(container);
@@ -74,8 +75,6 @@ Cat.prototype.render=function()
 
 }
 
-var frankie=new Cat("Frankie",["cuddling", "chasing", "food"],`images/frankie.jpeg` ,true,true,"shorthair");
-var serena=new Cat("Sereena",["cuddling", "chasing", "napping"],`images/serena.jpeg` ,true,false,"British")
 
 
 /*var frankie =
@@ -131,7 +130,7 @@ var serena=new Cat("Sereena",["cuddling", "chasing", "napping"],`images/serena.j
     }
 
 
-};*/
+};
 
 
 
@@ -251,11 +250,16 @@ var jumper =
     }
 
 
-};
+};*/
+function getRandomNum(min,max)
 
-frankie.getAge(2,5);
+{
+return Math.floor(Math.random() * (max-min+1))+min;
+}
+
+frankie.getAge(2, 5);
 frankie.render();
-sereena.getAge(3,7);
-sereena.render();
-jumper.getAge(1,6);
+serena.getAge(3, 7);
+serena.render();
+jumper.getAge(1, 6);
 jumper.render();
