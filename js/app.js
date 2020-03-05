@@ -19,11 +19,13 @@ mahmood.sayHi();
 
 console.log(ahmad);
 console.log(Person);*/
+var cats= [];
 
 var frankie = new Cat("Frankie", ["cuddling", "chasing", "food"], `images/frankie.jpeg`, true, true, "shorthair");
+//new Cat("Frankie", ["cuddling", "chasing", "food"], `images/frankie.jpeg`, true, true, "shorthair");
+//momken heek kaman
 var serena=new Cat("Sereena",["cuddling", "chasing", "food"],`images/serena.jpeg`, false, true, "Turkish");
 var jumper = new Cat("Jumper", ["cuddling", "chasing", "napping"], `images/jumper.jpeg`, true, false, "British")
-
 function Cat(name, likes, imagePath, goodWithDogs, goodWithCats, breed) {
     this.name = name;
     this.age = 0;
@@ -32,6 +34,7 @@ function Cat(name, likes, imagePath, goodWithDogs, goodWithCats, breed) {
     this.goodWithCats = goodWithCats;
     this.goodWithDogs = goodWithDogs;
     this.breed = breed;
+    cats.push(this);
 }
 Cat.prototype.getAge = function (min, max) {
     this.age = getRandomNum(min, max);
@@ -256,10 +259,17 @@ function getRandomNum(min,max)
 {
 return Math.floor(Math.random() * (max-min+1))+min;
 }
+//var cats=[frankie,serena,jumper];
+for(let i=0;i<cats.length;i++){
+    cats[i].getAge(3,7);
+    cats[i].render();
 
-frankie.getAge(2, 5);
-frankie.render();
-serena.getAge(3, 7);
-serena.render();
-jumper.getAge(1, 6);
-jumper.render();
+
+}
+
+//frankie.getAge(2, 5);
+//frankie.render();
+//serena.getAge(3, 7);
+//serena.render();
+//jumper.getAge(1, 6);
+//jumper.render();
