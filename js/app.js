@@ -68,6 +68,97 @@ Cat.prototype.render = function () {
         liEl.textContent = this.likes[i];
     }
 
+/*<!-- <table>
+        <tr>
+          <th>good with cats</th>
+          <th>good with dogs</th>
+
+        </tr>
+        <tr>
+          <td> true </td>
+          <td> false </td>
+        </tr>
+
+        <tr>
+          <td> true </td>
+          <td> true </td>
+        </tr>
+       
+        
+      </table>-->*/
+      //create table
+var tableEl=document.createElement("table");
+//create the first row
+var headerRowEl=document.createElement("tr");
+//cearte the second row
+var dataRowEl=document.createElement("tr");
+//create three here we create just two table headeres
+//append the table headers to the first row
+
+var th1El=document.createElement("th");
+th1El.textContent="good with cats";
+headerRowEl.appendChild(th1El);
+var th2El=document.createElement("th");
+th2El.textContent="good with dogs";
+headerRowEl.appendChild(th2El);
+/*var th3El=doc.createElement("th");
+th3El.textContent="good with kids";
+headerRowEl.appendChild(th3El);*/
+
+//create three td here we create just twe table data
+//append the table data to the second row
+var td1El=document.createElement("td");
+td1El.textContent=this.goodWithCats;
+
+dataRowEl.appendChild(td1El);
+var td2El=document.createElement("td");
+td2El.textContent=this.goodWithDogs;
+dataRowEl.appendChild(td2El);
+//append th two rows to the table
+tableEl.appendChild(headerRowEl);
+tableEl.appendChild(dataRowEl);
+//append the table to the article
+articleEl.appendChild(tableEl);
+
+//eza bedek kol altables yetla3o be makan wa7ad 
+
+/*var tableEl=document.createElement("table");
+//create the first row
+var headerRowEl=document.createElement("tr");
+//cearte the second row
+var dataRowEl=document.createElement("tr");
+//create three here we create just two table headeres
+//append the table headers to the first row
+
+var th1El=document.createElement("th");
+th1El.textContent="good with cats";
+var th2El=document.createElement("th");
+th2El.textContent="good with dogs";
+headerRowEl.appendChild(th1El);//had changed makano bas
+
+headerRowEl.appendChild(th2El);
+//var th3El=doc.createElement("th");
+//th3El.textContent="good with kids";
+//headerRowEl.appendChild(th3El);
+
+//create three td here we create just twe table data
+//append the table data to the second row
+var td1El=document.createElement("td");
+td1El.textContent=this.goodWithCats;
+dataRowEl.appendChild(td1El);
+var td2El=document.createElement("td");
+td2El.textContent=this.goodWithDogs;
+dataRowEl.appendChild(td2El);
+//append th two rows to the table
+tableEl.appendChild(headerRowEl);
+tableEl.appendChild(dataRowEl);
+//append the table to the article
+articleEl.appendChild(tableEl);*/
+
+
+
+ 
+
 
 
     var imgEl = document.createElement("img");
