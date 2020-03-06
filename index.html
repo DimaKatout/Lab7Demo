@@ -12,6 +12,32 @@
   </header>
   <main>
     <h2>Kittens Available for Adoption:</h2>
+    
+    <form id="catsForm">
+      <fieldset>
+        <legend> Cat Info </legend>
+        <label for="name">cat name</label>
+        <input type="text" id="name">
+        <br /> 
+        <label for="likes">Likes</label>
+        <input type="text" 
+        id="likes"
+        placeholder="add likes comma seprated"/>
+        <br /> 
+        <label for="breed">Breed</label>
+        <input type="checkbox" id="breed">
+        <br />
+        <label for="cats">Cats</label>
+        <input type="checkbox" id="cats">
+        <label for="dogs">Dogs</label>
+        <input type="checkbox" id="dogs">
+        <br />
+        <input type="submit">
+
+      </fieldset>
+
+    </form>
+
     <div id="kittenProfiles">
       <!-- generate this from js: !-->
       <!--
@@ -25,7 +51,7 @@
             <img src="images/frankie.jpeg" />
         </article>-->
       <!--bedna ne3mel table-->
-     <!-- <table>
+      <!-- <table>
         <tr>
           <th>good with cats</th>
           <th>good with dogs</th>

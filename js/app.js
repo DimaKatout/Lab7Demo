@@ -20,17 +20,22 @@ mahmood.sayHi();
 console.log(ahmad);
 console.log(Person);*/
 var cats= [];
+var frankie = new Cat("Frankie", ["cuddling", "chasing", "food"], true, true, "shorthair");
 
-var frankie = new Cat("Frankie", ["cuddling", "chasing", "food"], `images/frankie.jpeg`, true, true, "shorthair");
+//var frankie = new Cat("Frankie", ["cuddling", "chasing", "food"], `images/frankie.jpeg`, true, true, "shorthair");
 //new Cat("Frankie", ["cuddling", "chasing", "food"], `images/frankie.jpeg`, true, true, "shorthair");
 //momken heek kaman
-var serena=new Cat("Sereena",["cuddling", "chasing", "food"],`images/serena.jpeg`, false, true, "Turkish");
-var jumper = new Cat("Jumper", ["cuddling", "chasing", "napping"], `images/jumper.jpeg`, true, false, "British")
-function Cat(name, likes, imagePath, goodWithDogs, goodWithCats, breed) {
+var serena=new Cat("Sereena",["cuddling", "chasing", "food"], false, true, "Turkish");
+//var serena=new Cat("Sereena",["cuddling", "chasing", "food"],`images/serena.jpeg`, false, true, "Turkish");
+
+var jumper = new Cat("Jumper", ["cuddling", "chasing", "napping"], true, false, "British")
+//var jumper = new Cat("Jumper", ["cuddling", "chasing", "napping"], `images/jumper.jpeg`, true, false, "British")
+
+function Cat(name, likes, goodWithDogs, goodWithCats, breed) {
     this.name = name;
     this.age = 0;
     this.likes = likes;
-    this.imagePath = imagePath;
+    this.imagePath = `images/${name.toLowerCase()}.jpeg`;
     this.goodWithCats = goodWithCats;
     this.goodWithDogs = goodWithDogs;
     this.breed = breed;
